@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 const int QUEUE_CAPACITY = 11;
 
 struct CustomQueue {
