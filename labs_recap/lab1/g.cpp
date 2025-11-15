@@ -2,8 +2,6 @@
 
 #include <iostream>
 using namespace std;
-#include <bits/stdc++.h>
-
 
 bool isPrime(int number) {
     if (number <= 1) return false;
@@ -18,15 +16,33 @@ bool isPrime(int number) {
     return true;
 }
 
+int getNthPrime(int n) {
+    if (n == 1) {
+        return 2;
+    }
+    
+    int prime_count = 1;
+    int current_num = 1;
 
-int main () {
+    while (prime_count < n) {
+        current_num += 2;
+        if (isPrime(current_num)) {
+            prime_count++;
+        }
+    }
+
+    return current_num;
+}
+
+int main() {
     int n;
     cin >> n;
 
-
+    int prime_index = getNthPrime(n);
     
+    int super_prime = getNthPrime(prime_index);
 
-    
+    cout << super_prime << "\n";
 
     return 0;
 }
