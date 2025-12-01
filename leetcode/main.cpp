@@ -1,11 +1,9 @@
 #include <iostream>
 using namespace std;
-// hash tables
 
-int main() {
+int main () {
 
+    
 
-
-
-  return 0;
+    return 0;
 }
